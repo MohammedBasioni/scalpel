@@ -1,0 +1,43 @@
+{
+  "name": "ctx-scalpel",
+  "version": "0.1.0",
+  "description": "Cache-aware context surgery proxy for Claude Code — cut dead weight from your conversation history without breaking the prompt cache.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Mohammed Basioni",
+  "homepage": "https://github.com/MohammedBasioni/scalpel#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammedBasioni/scalpel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MohammedBasioni/scalpel/issues"
+  },
+  "keywords": [
+    "claude-code",
+    "anthropic",
+    "claude",
+    "prompt-cache",
+    "token-optimization",
+    "cost-reduction",
+    "llm",
+    "context",
+    "proxy"
+  ],
+  "bin": { "scalpel": "dist/cli.js" },
+  "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "spike": "tsx src/spike-proxy.ts",
+    "start": "tsx src/cli.ts start",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}
